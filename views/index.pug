@@ -1,0 +1,16 @@
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='/css/reset.css', rel='stylesheet')
+    link(href='/css/global.css', rel='stylesheet')
+    link(href='/css/user-profile.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i', rel='stylesheet', defer)
+
+  body
+    .root
+      img(src='/icons/pwa-icon-512x512.png', width='200', height='200', style="margin-bottom: 24px;")
+      
+      a.example-link(href='/user-profile-pug') Pug Example
+      a.example-link(href='/user-profile-react') React Example
+      a.example-link(href='/user-profile-react-ssr') React SSR Example

@@ -1,0 +1,32 @@
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(href='/css/reset.css', rel='stylesheet')
+    link(href='/css/global.css', rel='stylesheet')
+    link(href='/css/user-profile.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i', rel='stylesheet', defer)
+
+  body
+    .root
+      a(href='/')
+        img(src='/icons/pwa-icon-512x512.png', width='200', height='200', style="margin-bottom: 24px;")
+      
+      if props.success
+        .alert.alert--success(style='margin-bottom: 24px;')
+          .alert-children Alert! Success!
+      if props.error
+        .alert.alert--error(style='margin-bottom: 24px;')
+          .alert-children Alert! Error!
+
+      .paper
+        form.form(method='POST')
+          .input-scaffold
+            label(for='firstName') First Name
+            input(id='firstName', name='firstName', value=props.user.firstName)
+          .input-scaffold
+            label(for='lastName') Last Name
+            input(id='lastName', name='lastName', value=props.user.lastName)
+          button.button
+            .button-children Save and Continue
+              
